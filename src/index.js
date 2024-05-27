@@ -1,4 +1,3 @@
-
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
@@ -17,7 +16,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 
 // Connect to MongoDB
-mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(DB_URL, { useNewUrlParser: true }) 
   .then(() => {
     console.log('Connected to MongoDB');
     // Start the server
